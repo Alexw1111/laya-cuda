@@ -1,0 +1,26 @@
+# Environments, weights and build caches
+.venv/
+.venv-*/
+models/
+vendor/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# Local tooling
+.serena/
+.claude/
+
+# Local only: the previous implementation, working notes and backups
+old/
+design-qa.md
+AGENTS.md.bak-*
+
+# Experiment output stays local; publish evidence explicitly with `git add -f`
+reports/
+
+# Local agent instructions
+AGENTS.md

@@ -1,0 +1,68 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "laya-cuda"
+version = "0.1.0"
+description = "Fast local CUDA inference for Laya decision models, without Torch."
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+license = "Apache-2.0"
+authors = [{ name = "Alexw1111" }]
+keywords = ["laya", "modernbert", "cuda", "inference", "decision-model"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: GPU :: NVIDIA CUDA :: 12",
+  "Intended Audience :: Developers",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "cupy-cuda12x==14.2.0", "nvidia-cublas-cu12==12.4.5.8",
+  "nvidia-cuda-runtime-cu12==12.4.127", "nvidia-cuda-nvrtc-cu12==12.4.127",
+  "numpy>=2.0,<2.6", "safetensors>=0.8,<0.9", "tokenizers>=0.23.1,<0.24",
+  "huggingface-hub>=1.5,<2",
+]
+
+[project.urls]
+Homepage = "https://github.com/Alexw1111/laya-cuda"
+Repository = "https://github.com/Alexw1111/laya-cuda"
+Issues = "https://github.com/Alexw1111/laya-cuda/issues"
+
+[project.scripts]
+laya-cuda = "laya_cuda.cli:main"
+
+[project.optional-dependencies]
+reference = ["laya==0.3.5", "torch==2.12.1", "transformers==5.17.0"]
+benchmark = ["laya-cuda[reference]", "psutil>=7,<8", "pyarrow>=25,<26", "datasets>=4,<5", "matplotlib>=3.10,<4"]
+full = ["laya-cuda[benchmark]"]
+
+[dependency-groups]
+dev = ["pytest>=9,<10", "matplotlib>=3.10,<4"]
+
+[tool.uv]
+default-groups = []
+environments = ["sys_platform == 'win32' and platform_machine == 'AMD64'", "sys_platform == 'linux' and platform_machine == 'x86_64'"]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130", marker = "sys_platform == 'win32'" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["laya_cuda"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/laya_cuda", "/benchmarks", "/examples", "/tests", "/tools", "/docs", "/README.md", "/README.zh-CN.md", "/LICENSE", "/pyproject.toml", "/uv.lock", "/.python-version"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["gpu: requires NVIDIA GPU and local checkpoints", "reference: requires official SDK"]

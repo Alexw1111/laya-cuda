@@ -1,0 +1,1139 @@
+{
+  "gates": {
+    "probability_mae": 0.001,
+    "probability_max": 0.01,
+    "agreement": 0.995,
+    "speedup": 1.05
+  },
+  "reference": "official-fp32",
+  "models": {
+    "laya": {
+      "quality": {
+        "decisions": 2000,
+        "mae": 0.000332239437,
+        "max": 0.009,
+        "agreement": 0.999,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "accuracy": {
+          "cuda": 0.3625,
+          "official-fp32": 0.3615,
+          "official-fp16": 0.362,
+          "official": 0.3615
+        },
+        "passed": true
+      },
+      "long": {
+        "decisions": 240,
+        "mae": 0.000311059371,
+        "max": 0.0053,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "tokens": [
+          360,
+          512
+        ],
+        "passed": true,
+        "peers": {
+          "official-fp16": {
+            "decisions": 240,
+            "mae": 0.000314668219,
+            "max": 0.0043,
+            "agreement": 1.0,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          },
+          "official": {
+            "decisions": 240,
+            "mae": 0.00222363213,
+            "max": 0.0151,
+            "agreement": 0.9875,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          }
+        }
+      },
+      "timing": {
+        "l32-q1": {
+          "rounds": [
+            {
+              "speedup": 1.0893167504661037,
+              "p95_ratio": 0.9180066308280983,
+              "p99_ratio": 0.9180066308280983
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l32-q5": {
+          "rounds": [
+            {
+              "speedup": 2.64738224656098,
+              "p95_ratio": 0.3777316257593805,
+              "p99_ratio": 0.3777316257593805
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l32-q10": {
+          "rounds": [
+            {
+              "speedup": 1.6327310622325122,
+              "p95_ratio": 0.6124707388323044,
+              "p99_ratio": 0.6124707388323044
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "l64-q1": {
+          "rounds": [
+            {
+              "speedup": 2.825229918393224,
+              "p95_ratio": 0.3539534936571548,
+              "p99_ratio": 0.3539534936571548
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0006,
+          "verified_speedup": false
+        },
+        "l64-q5": {
+          "rounds": [
+            {
+              "speedup": 2.4117099863035047,
+              "p95_ratio": 0.41464355402563474,
+              "p99_ratio": 0.41464355402563474
+            }
+          ],
+          "probability_mae": 0.0004,
+          "probability_max": 0.0004,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0006,
+          "verified_speedup": false
+        },
+        "l64-q10": {
+          "rounds": [
+            {
+              "speedup": 1.4352963282718176,
+              "p95_ratio": 0.696720238394297,
+              "p99_ratio": 0.696720238394297
+            }
+          ],
+          "probability_mae": 0.0004,
+          "probability_max": 0.0004,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0003,
+          "verified_speedup": false
+        },
+        "l128-q1": {
+          "rounds": [
+            {
+              "speedup": 2.647075723652898,
+              "p95_ratio": 0.37777536587431854,
+              "p99_ratio": 0.37777536587431854
+            }
+          ],
+          "probability_mae": 0.0002,
+          "probability_max": 0.0002,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "l128-q5": {
+          "rounds": [
+            {
+              "speedup": 0.57654673299955,
+              "p95_ratio": 1.7344647758168472,
+              "p99_ratio": 1.7344647758168472
+            }
+          ],
+          "probability_mae": 0.0002,
+          "probability_max": 0.0002,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "l128-q10": {
+          "rounds": [
+            {
+              "speedup": 1.0398293267224912,
+              "p95_ratio": 0.9616962844777307,
+              "p99_ratio": 0.9616962844777307
+            }
+          ],
+          "probability_mae": 0.0002,
+          "probability_max": 0.0002,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l256-q1": {
+          "rounds": [
+            {
+              "speedup": 1.8580336328424214,
+              "p95_ratio": 0.5382033900377784,
+              "p99_ratio": 0.5382033900377784
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l256-q5": {
+          "rounds": [
+            {
+              "speedup": 1.3519217603067513,
+              "p95_ratio": 0.7396877758466583,
+              "p99_ratio": 0.7396877758466583
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "l256-q10": {
+          "rounds": [
+            {
+              "speedup": 1.2124598782522562,
+              "p95_ratio": 0.8247695597494623,
+              "p99_ratio": 0.8247695597494623
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0003,
+          "verified_speedup": false
+        },
+        "l512-q1": {
+          "rounds": [
+            {
+              "speedup": 1.0668942017994283,
+              "p95_ratio": 0.9373000605996318,
+              "p99_ratio": 0.9373000605996318
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0007,
+          "verified_speedup": false
+        },
+        "l512-q5": {
+          "rounds": [
+            {
+              "speedup": 1.1296083354682602,
+              "p95_ratio": 0.8852625893429396,
+              "p99_ratio": 0.8852625893429396
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l512-q10": {
+          "rounds": [
+            {
+              "speedup": 1.0876906755128015,
+              "p95_ratio": 0.9193790316613141,
+              "p99_ratio": 0.9193790316613141
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0006,
+          "verified_speedup": false
+        },
+        "boundary-l127": {
+          "rounds": [
+            {
+              "speedup": 2.7257000431932954,
+              "p95_ratio": 0.36687822730062747,
+              "p99_ratio": 0.36687822730062747
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "boundary-l129": {
+          "rounds": [
+            {
+              "speedup": 2.4968962146331912,
+              "p95_ratio": 0.4004972229680383,
+              "p99_ratio": 0.4004972229680383
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "boundary-l511": {
+          "rounds": [
+            {
+              "speedup": 1.333368775755578,
+              "p95_ratio": 0.749980064167418,
+              "p99_ratio": 0.749980064167418
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "mixed-lengths": {
+          "rounds": [
+            {
+              "speedup": 4.069258055120273,
+              "p95_ratio": 0.24574504404843983,
+              "p99_ratio": 0.24574504404843983
+            }
+          ],
+          "probability_mae": 0.00044,
+          "probability_max": 0.0007,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0012,
+          "verified_speedup": false
+        }
+      }
+    },
+    "laya-multilingual": {
+      "quality": {
+        "decisions": 2000,
+        "mae": 0.000323732394,
+        "max": 0.0053,
+        "agreement": 0.999,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "accuracy": {
+          "cuda": 0.3515,
+          "official-fp32": 0.352,
+          "official-fp16": 0.352,
+          "official": 0.3505
+        },
+        "passed": false
+      },
+      "long": {
+        "decisions": 240,
+        "mae": 0.000338300349,
+        "max": 0.0027,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "tokens": [
+          653,
+          1024
+        ],
+        "passed": true,
+        "peers": {
+          "official-fp16": {
+            "decisions": 240,
+            "mae": 0.000350873108,
+            "max": 0.0028,
+            "agreement": 1.0,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          },
+          "official": {
+            "decisions": 240,
+            "mae": 0.003060768335,
+            "max": 0.0293,
+            "agreement": 0.9916666666666667,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          }
+        }
+      },
+      "timing": {
+        "l32-q1": {
+          "rounds": [
+            {
+              "speedup": 0.9541853773850199,
+              "p95_ratio": 1.048014383473929,
+              "p99_ratio": 1.048014383473929
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0003,
+          "verified_speedup": false
+        },
+        "l32-q5": {
+          "rounds": [
+            {
+              "speedup": 2.397743121315095,
+              "p95_ratio": 0.4170588546831188,
+              "p99_ratio": 0.4170588546831188
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0003,
+          "verified_speedup": false
+        },
+        "l32-q10": {
+          "rounds": [
+            {
+              "speedup": 1.7204692821463763,
+              "p95_ratio": 0.5812367650949555,
+              "p99_ratio": 0.5812367650949555
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0003,
+          "verified_speedup": false
+        },
+        "l64-q1": {
+          "rounds": [
+            {
+              "speedup": 2.4296902372653157,
+              "p95_ratio": 0.4115750990239513,
+              "p99_ratio": 0.4115750990239513
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l64-q5": {
+          "rounds": [
+            {
+              "speedup": 2.6281534586256017,
+              "p95_ratio": 0.3804952852802409,
+              "p99_ratio": 0.3804952852802409
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "l64-q10": {
+          "rounds": [
+            {
+              "speedup": 1.9026188657759402,
+              "p95_ratio": 0.5255913404349497,
+              "p99_ratio": 0.5255913404349497
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "l128-q1": {
+          "rounds": [
+            {
+              "speedup": 3.0291573858510197,
+              "p95_ratio": 0.33012480786601894,
+              "p99_ratio": 0.33012480786601894
+            }
+          ],
+          "probability_mae": 0.0005,
+          "probability_max": 0.0005,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l128-q5": {
+          "rounds": [
+            {
+              "speedup": 1.5152168236102805,
+              "p95_ratio": 0.6599715528615354,
+              "p99_ratio": 0.6599715528615354
+            }
+          ],
+          "probability_mae": 0.0005,
+          "probability_max": 0.0005,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l128-q10": {
+          "rounds": [
+            {
+              "speedup": 1.111955131558005,
+              "p95_ratio": 0.8993168623619372,
+              "p99_ratio": 0.8993168623619372
+            }
+          ],
+          "probability_mae": 0.0008,
+          "probability_max": 0.0008,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0006,
+          "verified_speedup": false
+        },
+        "l256-q1": {
+          "rounds": [
+            {
+              "speedup": 1.792541669860262,
+              "p95_ratio": 0.5578670871723475,
+              "p99_ratio": 0.5578670871723475
+            }
+          ],
+          "probability_mae": 0.0008,
+          "probability_max": 0.0008,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0004,
+          "verified_speedup": false
+        },
+        "l256-q5": {
+          "rounds": [
+            {
+              "speedup": 1.3715600512752628,
+              "p95_ratio": 0.729096767633477,
+              "p99_ratio": 0.729096767633477
+            }
+          ],
+          "probability_mae": 0.0008,
+          "probability_max": 0.0008,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.001,
+          "verified_speedup": false
+        },
+        "l256-q10": {
+          "rounds": [
+            {
+              "speedup": 1.2967779892355082,
+              "p95_ratio": 0.7711420214569895,
+              "p99_ratio": 0.7711420214569895
+            }
+          ],
+          "probability_mae": 0.0009,
+          "probability_max": 0.0009,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.001,
+          "verified_speedup": false
+        },
+        "l512-q1": {
+          "rounds": [
+            {
+              "speedup": 0.9628152606012649,
+              "p95_ratio": 1.0386208454730077,
+              "p99_ratio": 1.0386208454730077
+            }
+          ],
+          "probability_mae": 0.0005,
+          "probability_max": 0.0005,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0008,
+          "verified_speedup": false
+        },
+        "l512-q5": {
+          "rounds": [
+            {
+              "speedup": 1.0520500955294705,
+              "p95_ratio": 0.9505250788430611,
+              "p99_ratio": 0.9505250788430611
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "l512-q10": {
+          "rounds": [
+            {
+              "speedup": 1.1885773317016013,
+              "p95_ratio": 0.8413419752574041,
+              "p99_ratio": 0.8413419752574041
+            }
+          ],
+          "probability_mae": 0.0007,
+          "probability_max": 0.0007,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l768-q1": {
+          "rounds": [
+            {
+              "speedup": 0.9383777358036671,
+              "p95_ratio": 1.065668932504624,
+              "p99_ratio": 1.065668932504624
+            }
+          ],
+          "probability_mae": 0.0071,
+          "probability_max": 0.0071,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0066,
+          "verified_speedup": false
+        },
+        "l768-q5": {
+          "rounds": [
+            {
+              "speedup": 1.0319912184165685,
+              "p95_ratio": 0.9690004935646118,
+              "p99_ratio": 0.9690004935646118
+            }
+          ],
+          "probability_mae": 0.008,
+          "probability_max": 0.008,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0085,
+          "verified_speedup": false
+        },
+        "l768-q10": {
+          "rounds": [
+            {
+              "speedup": 1.1150619223691272,
+              "p95_ratio": 0.8968111814591788,
+              "p99_ratio": 0.8968111814591788
+            }
+          ],
+          "probability_mae": 0.0071,
+          "probability_max": 0.0071,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0089,
+          "verified_speedup": false
+        },
+        "l1024-q1": {
+          "rounds": [
+            {
+              "speedup": 0.860833052580175,
+              "p95_ratio": 1.1616654321098614,
+              "p99_ratio": 1.1616654321098614
+            }
+          ],
+          "probability_mae": 0.0007,
+          "probability_max": 0.0007,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "l1024-q5": {
+          "rounds": [
+            {
+              "speedup": 1.0296053049996945,
+              "p95_ratio": 0.9712459669196214,
+              "p99_ratio": 0.9712459669196214
+            }
+          ],
+          "probability_mae": 0.0008,
+          "probability_max": 0.0008,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0015,
+          "verified_speedup": false
+        },
+        "l1024-q10": {
+          "rounds": [
+            {
+              "speedup": 1.0703846988836527,
+              "p95_ratio": 0.9342435491117728,
+              "p99_ratio": 0.9342435491117728
+            }
+          ],
+          "probability_mae": 0.0008,
+          "probability_max": 0.0008,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0014,
+          "verified_speedup": false
+        },
+        "boundary-l127": {
+          "rounds": [
+            {
+              "speedup": 2.787377594365146,
+              "p95_ratio": 0.3587601486147987,
+              "p99_ratio": 0.3587601486147987
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "boundary-l129": {
+          "rounds": [
+            {
+              "speedup": 2.0070154202231034,
+              "p95_ratio": 0.4982522754552819,
+              "p99_ratio": 0.4982522754552819
+            }
+          ],
+          "probability_mae": 0.0005,
+          "probability_max": 0.0005,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0013,
+          "verified_speedup": false
+        },
+        "boundary-l1023": {
+          "rounds": [
+            {
+              "speedup": 0.869462053634381,
+              "p95_ratio": 1.1501364502567604,
+              "p99_ratio": 1.1501364502567604
+            }
+          ],
+          "probability_mae": 0.0027,
+          "probability_max": 0.0027,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0004,
+          "verified_speedup": false
+        },
+        "mixed-lengths": {
+          "rounds": [
+            {
+              "speedup": 3.0846025970498236,
+              "p95_ratio": 0.3241908701485307,
+              "p99_ratio": 0.3241908701485307
+            }
+          ],
+          "probability_mae": 0.00116,
+          "probability_max": 0.0032,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0028,
+          "verified_speedup": false
+        }
+      }
+    },
+    "laya-typed-decisions": {
+      "quality": {
+        "decisions": 2000,
+        "mae": 8.7253521e-05,
+        "max": 0.0017,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "accuracy": {
+          "cuda": 0.766,
+          "official-fp32": 0.766,
+          "official-fp16": 0.766,
+          "official": 0.769
+        },
+        "passed": true
+      },
+      "long": {
+        "decisions": 240,
+        "mae": 0.000122700815,
+        "max": 0.0024,
+        "agreement": 0.9958333333333333,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "tokens": [
+          650,
+          1024
+        ],
+        "passed": true,
+        "peers": {
+          "official-fp16": {
+            "decisions": 240,
+            "mae": 0.000123050058,
+            "max": 0.0024,
+            "agreement": 1.0,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          },
+          "official": {
+            "decisions": 240,
+            "mae": 0.001201746217,
+            "max": 0.0541,
+            "agreement": 1.0,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          }
+        }
+      },
+      "timing": {
+        "l32-q1": {
+          "rounds": [
+            {
+              "speedup": 1.4785103958032706,
+              "p95_ratio": 0.6763564211915486,
+              "p99_ratio": 0.6763564211915486
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l32-q5": {
+          "rounds": [
+            {
+              "speedup": 2.1193917129513746,
+              "p95_ratio": 0.4718334953794089,
+              "p99_ratio": 0.4718334953794089
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l32-q10": {
+          "rounds": [
+            {
+              "speedup": 1.8768832849776966,
+              "p95_ratio": 0.5327981809012078,
+              "p99_ratio": 0.5327981809012078
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "l64-q1": {
+          "rounds": [
+            {
+              "speedup": 2.4392480376315775,
+              "p95_ratio": 0.40996240832111697,
+              "p99_ratio": 0.40996240832111697
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0003,
+          "verified_speedup": false
+        },
+        "l64-q5": {
+          "rounds": [
+            {
+              "speedup": 1.9522623399165264,
+              "p95_ratio": 0.5122262410915315,
+              "p99_ratio": 0.5122262410915315
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0004,
+          "verified_speedup": false
+        },
+        "l64-q10": {
+          "rounds": [
+            {
+              "speedup": 1.2974140842953805,
+              "p95_ratio": 0.7707639466108426,
+              "p99_ratio": 0.7707639466108426
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0005,
+          "verified_speedup": false
+        },
+        "l128-q1": {
+          "rounds": [
+            {
+              "speedup": 2.600844821241517,
+              "p95_ratio": 0.38449045165357026,
+              "p99_ratio": 0.38449045165357026
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "l128-q5": {
+          "rounds": [
+            {
+              "speedup": 1.153711627788928,
+              "p95_ratio": 0.8667677224650026,
+              "p99_ratio": 0.8667677224650026
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l128-q10": {
+          "rounds": [
+            {
+              "speedup": 0.993895565970438,
+              "p95_ratio": 1.0061419270178569,
+              "p99_ratio": 1.0061419270178569
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "l256-q1": {
+          "rounds": [
+            {
+              "speedup": 2.0218554017353867,
+              "p95_ratio": 0.4945952114783708,
+              "p99_ratio": 0.4945952114783708
+            }
+          ],
+          "probability_mae": 0.0002,
+          "probability_max": 0.0002,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "l256-q5": {
+          "rounds": [
+            {
+              "speedup": 1.2043330759927375,
+              "p95_ratio": 0.8303350791687717,
+              "p99_ratio": 0.8303350791687717
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0003,
+          "verified_speedup": false
+        },
+        "l256-q10": {
+          "rounds": [
+            {
+              "speedup": 1.147662514894006,
+              "p95_ratio": 0.8713362918299692,
+              "p99_ratio": 0.8713362918299692
+            }
+          ],
+          "probability_mae": 0.0004,
+          "probability_max": 0.0004,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "l512-q1": {
+          "rounds": [
+            {
+              "speedup": 1.0631618119336566,
+              "p95_ratio": 0.9405905938073724,
+              "p99_ratio": 0.9405905938073724
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "l512-q5": {
+          "rounds": [
+            {
+              "speedup": 1.1410679849255976,
+              "p95_ratio": 0.8763719718814162,
+              "p99_ratio": 0.8763719718814162
+            }
+          ],
+          "probability_mae": 0.0002,
+          "probability_max": 0.0002,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0003,
+          "verified_speedup": false
+        },
+        "l512-q10": {
+          "rounds": [
+            {
+              "speedup": 1.063282962921455,
+              "p95_ratio": 0.9404834224489217,
+              "p99_ratio": 0.9404834224489217
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l768-q1": {
+          "rounds": [
+            {
+              "speedup": 0.8672370920788393,
+              "p95_ratio": 1.1530872112525965,
+              "p99_ratio": 1.1530872112525965
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0004,
+          "verified_speedup": false
+        },
+        "l768-q5": {
+          "rounds": [
+            {
+              "speedup": 1.0928512017475762,
+              "p95_ratio": 0.9150376541663695,
+              "p99_ratio": 0.9150376541663695
+            }
+          ],
+          "probability_mae": 0.0003,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l768-q10": {
+          "rounds": [
+            {
+              "speedup": 1.068665137690283,
+              "p95_ratio": 0.9357468160337956,
+              "p99_ratio": 0.9357468160337956
+            }
+          ],
+          "probability_mae": 0.0002,
+          "probability_max": 0.0002,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l1024-q1": {
+          "rounds": [
+            {
+              "speedup": 0.7485892684773114,
+              "p95_ratio": 1.3358460267992853,
+              "p99_ratio": 1.3358460267992853
+            }
+          ],
+          "probability_mae": 0.0002,
+          "probability_max": 0.0002,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "l1024-q5": {
+          "rounds": [
+            {
+              "speedup": 0.9604475725586981,
+              "p95_ratio": 1.0411812456727145,
+              "p99_ratio": 1.0411812456727145
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        },
+        "l1024-q10": {
+          "rounds": [
+            {
+              "speedup": 1.078464777045889,
+              "p95_ratio": 0.9272440058164734,
+              "p99_ratio": 0.9272440058164734
+            }
+          ],
+          "probability_mae": 0.0002,
+          "probability_max": 0.0002,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0,
+          "verified_speedup": false
+        },
+        "boundary-l127": {
+          "rounds": [
+            {
+              "speedup": 2.600186402056892,
+              "p95_ratio": 0.38458781232335665,
+              "p99_ratio": 0.38458781232335665
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "boundary-l129": {
+          "rounds": [
+            {
+              "speedup": 2.009917094665228,
+              "p95_ratio": 0.4975329592719147,
+              "p99_ratio": 0.4975329592719147
+            }
+          ],
+          "probability_mae": 0.0001,
+          "probability_max": 0.0001,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "boundary-l1023": {
+          "rounds": [
+            {
+              "speedup": 0.9184787653564567,
+              "p95_ratio": 1.0887567984349702,
+              "p99_ratio": 1.0887567984349702
+            }
+          ],
+          "probability_mae": 0.0,
+          "probability_max": 0.0,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0001,
+          "verified_speedup": false
+        },
+        "mixed-lengths": {
+          "rounds": [
+            {
+              "speedup": 3.51319430814495,
+              "p95_ratio": 0.28464124448841654,
+              "p99_ratio": 0.28464124448841654
+            }
+          ],
+          "probability_mae": 0.00022,
+          "probability_max": 0.0003,
+          "labels_match_reference": true,
+          "official_fp16_probability_max": 0.0002,
+          "verified_speedup": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "laya": {
+    "repo_id": "convaiinnovations/laya",
+    "revision": "1c5edc17a7acd8701df6fc341c0d179f1c62c982"
+  },
+  "laya-multilingual": {
+    "repo_id": "convaiinnovations/laya-multilingual",
+    "revision": "052592a15d198d9ad47da779604259b10b47b7aa"
+  },
+  "laya-typed-decisions": {
+    "repo_id": "convaiinnovations/laya-typed-decisions",
+    "revision": "f9ab0b228f0fc0f14d873dbc99038f135c2da1b2"
+  }
+}

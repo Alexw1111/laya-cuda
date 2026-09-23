@@ -1,0 +1,100 @@
+{
+  "reference": "SDK FP32, reports/fp32-reference/quality-windows (2026-09-23)",
+  "platform": "Windows 11",
+  "accuracy_rule": "one-sided exact sign test on decisions exactly one side gets right; fail if p < 0.05",
+  "models": {
+    "laya": {
+      "fixed": {
+        "decisions": 2000,
+        "mae": 0.000319309859,
+        "max": 0.0064,
+        "agreement": 0.9995,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "correct": 722,
+        "reference_correct": 723,
+        "accuracy_test": {
+          "wins": 0,
+          "losses": 1,
+          "p_value": 0.5
+        },
+        "passed": true
+      },
+      "long": {
+        "decisions": 240,
+        "mae": 0.000308963912,
+        "max": 0.0088,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "passed": true
+      },
+      "stress_max": 0.0007,
+      "implementation_kernels_cu": "55e3a03cb43758e2fe85a562b6bc3e9c91cee4a1114360d6918f16064760df7b"
+    },
+    "laya-multilingual": {
+      "fixed": {
+        "decisions": 2000,
+        "mae": 0.000325985915,
+        "max": 0.0079,
+        "agreement": 0.9985,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "correct": 705,
+        "reference_correct": 704,
+        "accuracy_test": {
+          "wins": 1,
+          "losses": 0,
+          "p_value": 1.0
+        },
+        "passed": true
+      },
+      "long": {
+        "decisions": 240,
+        "mae": 0.000342840512,
+        "max": 0.0072,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "passed": true
+      },
+      "stress_max": 0.0036,
+      "implementation_kernels_cu": "55e3a03cb43758e2fe85a562b6bc3e9c91cee4a1114360d6918f16064760df7b"
+    },
+    "laya-typed-decisions": {
+      "fixed": {
+        "decisions": 2000,
+        "mae": 9.0098592e-05,
+        "max": 0.0019,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "correct": 1532,
+        "reference_correct": 1532,
+        "accuracy_test": {
+          "wins": 0,
+          "losses": 0,
+          "p_value": 1.0
+        },
+        "passed": true
+      },
+      "long": {
+        "decisions": 240,
+        "mae": 0.000118044237,
+        "max": 0.0021,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "passed": true
+      },
+      "stress_max": 0.0004,
+      "implementation_kernels_cu": "55e3a03cb43758e2fe85a562b6bc3e9c91cee4a1114360d6918f16064760df7b"
+    }
+  }
+}

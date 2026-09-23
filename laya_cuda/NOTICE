@@ -1,0 +1,6 @@
+Laya request serialization, sequence construction and decision decoding follow
+the Apache-2.0 Laya SDK by Nandha Kishor / Convai Innovations.
+Source: https://github.com/NandhaKishorM/laya
+Reference release: laya 0.3.5.
+This project implements a separate inference runtime and modifies the request
+implementation to use tokenizers and NumPy without Torch or Transformers.

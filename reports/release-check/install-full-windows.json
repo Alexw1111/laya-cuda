@@ -1,0 +1,345 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13",
+  "packages": {
+    "aiohappyeyeballs": "2.7.1",
+    "aiohttp": "3.14.3",
+    "aiosignal": "1.4.0",
+    "annotated-doc": "0.0.5",
+    "anyio": "4.15.1",
+    "attrs": "26.1.0",
+    "certifi": "2026.7.22",
+    "charset-normalizer": "3.5.1",
+    "click": "8.5.0",
+    "colorama": "0.4.6",
+    "contourpy": "1.4.0",
+    "cuda-pathfinder": "1.8.2",
+    "cupy-cuda12x": "14.2.0",
+    "cycler": "0.12.1",
+    "datasets": "4.8.5",
+    "dill": "0.4.1",
+    "filelock": "4.0.1",
+    "fonttools": "4.65.0",
+    "frozenlist": "1.8.0",
+    "fsspec": "2026.2.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.6.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "huggingface_hub": "1.32.0",
+    "idna": "3.20",
+    "jinja2": "3.1.6",
+    "kiwisolver": "1.5.1",
+    "laya": "0.3.5",
+    "laya-fast": "0.1.0",
+    "markdown-it-py": "4.2.0",
+    "markupsafe": "3.0.3",
+    "matplotlib": "3.11.2",
+    "mdurl": "0.1.2",
+    "mpmath": "1.3.0",
+    "multidict": "6.9.1",
+    "multiprocess": "0.70.19",
+    "networkx": "3.7",
+    "numpy": "2.5.3",
+    "nvidia-cublas-cu12": "12.4.5.8",
+    "nvidia-cuda-nvrtc-cu12": "12.4.127",
+    "nvidia-cuda-runtime-cu12": "12.4.127",
+    "packaging": "26.3",
+    "pandas": "3.0.6",
+    "pillow": "12.3.0",
+    "pip": "26.2.1",
+    "propcache": "0.5.4",
+    "psutil": "7.2.2",
+    "pyarrow": "25.0.1",
+    "pygments": "2.21.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "pyyaml": "6.0.3",
+    "regex": "2026.9.10",
+    "requests": "2.34.2",
+    "rich": "15.0.0",
+    "safetensors": "0.8.0",
+    "setuptools": "81.0.0",
+    "shellingham": "1.5.4",
+    "six": "1.17.0",
+    "sympy": "1.14.0",
+    "tokenizers": "0.23.2",
+    "torch": "2.12.1+cu130",
+    "tqdm": "4.70.1",
+    "transformers": "5.17.0",
+    "typer": "0.27.2",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.4",
+    "urllib3": "2.8.0",
+    "xxhash": "4.0.1",
+    "yarl": "1.25.1"
+  },
+  "import_ms": 70.37659996422008,
+  "package_path": "<temp>\\venv-full\\Lib\\site-packages\\laya_fast\\__init__.py",
+  "models": {
+    "laya": {
+      "load_ms": 1862.4140999745578,
+      "first": {
+        "gpu_ms": 137.48434448242188,
+        "shape": [
+          3,
+          64,
+          2
+        ],
+        "cache_miss": true,
+        "graph_capture": false,
+        "graph_replay": false,
+        "owned_gpu_bytes": 956496384,
+        "precision": "float16",
+        "tokens_per_question": [
+          20,
+          26,
+          34
+        ],
+        "input_sha256": "cd63db97335048d9bc84e455d8df56313fb0f5c83f6c632d6dfdce8a66183616",
+        "backend": "cuda",
+        "api_ms": 140.0429999921471
+      },
+      "long": {
+        "gpu_ms": 54.92736053466797,
+        "shape": [
+          3,
+          512,
+          2
+        ],
+        "cache_miss": true,
+        "graph_capture": false,
+        "graph_replay": false,
+        "owned_gpu_bytes": 1068328960,
+        "precision": "float16",
+        "tokens_per_question": [
+          512,
+          512,
+          512
+        ],
+        "input_sha256": "57674599d4038e94ef04ae996fd10ba3549af33c9802aca9c971ed3a3ab13f76",
+        "backend": "cuda",
+        "api_ms": 63.86890000430867
+      },
+      "answers": {
+        "choice": {
+          "type": "choice",
+          "confidence": 0.6566,
+          "action": {
+            "act_probability": 1.0
+          },
+          "probabilities": {
+            "payment": 0.9359,
+            "software": 0.0641
+          },
+          "choice": "payment"
+        },
+        "score": {
+          "type": "score",
+          "confidence": 0.0763,
+          "action": {
+            "act_probability": 1.0
+          },
+          "probabilities": {
+            "0": 0.3389,
+            "1": 0.6611
+          },
+          "score": 0.6611,
+          "legend": {
+            "0": "low",
+            "1": "high"
+          }
+        },
+        "noul": {
+          "type": "noul",
+          "confidence": 0.6718,
+          "action": {
+            "act_probability": 1.0
+          },
+          "noul": 0.6718
+        }
+      }
+    },
+    "laya-multilingual": {
+      "load_ms": 1576.3351999921724,
+      "first": {
+        "gpu_ms": 2.643968105316162,
+        "shape": [
+          3,
+          64,
+          2
+        ],
+        "cache_miss": true,
+        "graph_capture": false,
+        "graph_replay": false,
+        "owned_gpu_bytes": 1044446208,
+        "precision": "float16",
+        "tokens_per_question": [
+          20,
+          27,
+          33
+        ],
+        "input_sha256": "56a48e09eef9b67b2251ceacad4f1715bf007f550390801cc4345012d6d44286",
+        "backend": "cuda",
+        "api_ms": 4.4849999831058085
+      },
+      "long": {
+        "gpu_ms": 18.64089584350586,
+        "shape": [
+          3,
+          1024,
+          2
+        ],
+        "cache_miss": true,
+        "graph_capture": false,
+        "graph_replay": false,
+        "owned_gpu_bytes": 1200175104,
+        "precision": "float16",
+        "tokens_per_question": [
+          1024,
+          1024,
+          1024
+        ],
+        "input_sha256": "027fbec122789360b54eda8ffb9e3593fff358ff8cfb43e75e8000f032737c83",
+        "backend": "cuda",
+        "api_ms": 27.881199959665537
+      },
+      "answers": {
+        "choice": {
+          "type": "choice",
+          "confidence": 0.6515,
+          "action": {
+            "act_probability": 1.0
+          },
+          "probabilities": {
+            "payment": 0.9346,
+            "software": 0.0654
+          },
+          "choice": "payment"
+        },
+        "score": {
+          "type": "score",
+          "confidence": 0.5338,
+          "action": {
+            "act_probability": 1.0
+          },
+          "probabilities": {
+            "0": 0.0991,
+            "1": 0.9009
+          },
+          "score": 0.9009,
+          "legend": {
+            "0": "low",
+            "1": "high"
+          }
+        },
+        "noul": {
+          "type": "noul",
+          "confidence": 0.9444,
+          "action": {
+            "act_probability": 1.0
+          },
+          "noul": 0.0556
+        }
+      }
+    },
+    "laya-typed-decisions": {
+      "load_ms": 937.5169999548234,
+      "first": {
+        "gpu_ms": 3.210239887237549,
+        "shape": [
+          3,
+          64,
+          2
+        ],
+        "cache_miss": true,
+        "graph_capture": false,
+        "graph_replay": false,
+        "owned_gpu_bytes": 956496384,
+        "precision": "float16",
+        "tokens_per_question": [
+          20,
+          26,
+          34
+        ],
+        "input_sha256": "cd63db97335048d9bc84e455d8df56313fb0f5c83f6c632d6dfdce8a66183616",
+        "backend": "cuda",
+        "api_ms": 5.462499975692481
+      },
+      "long": {
+        "gpu_ms": 35.38444900512695,
+        "shape": [
+          3,
+          1024,
+          2
+        ],
+        "cache_miss": true,
+        "graph_capture": false,
+        "graph_replay": false,
+        "owned_gpu_bytes": 1177714176,
+        "precision": "float16",
+        "tokens_per_question": [
+          1024,
+          1024,
+          1024
+        ],
+        "input_sha256": "df09865d04eaa5c5db0d1ca0e1110ec047dbcdcde2a4a3c294354cf2ea418ee4",
+        "backend": "cuda",
+        "api_ms": 47.33169998507947
+      },
+      "answers": {
+        "choice": {
+          "type": "choice",
+          "confidence": 0.3723,
+          "action": {
+            "act_probability": 1.0
+          },
+          "probabilities": {
+            "payment": 0.8427,
+            "software": 0.1573
+          },
+          "choice": "payment"
+        },
+        "score": {
+          "type": "score",
+          "confidence": 0.1977,
+          "action": {
+            "act_probability": 1.0
+          },
+          "probabilities": {
+            "0": 0.2444,
+            "1": 0.7556
+          },
+          "score": 0.7556,
+          "legend": {
+            "0": "low",
+            "1": "high"
+          }
+        },
+        "noul": {
+          "type": "noul",
+          "confidence": 0.6023,
+          "action": {
+            "act_probability": 1.0
+          },
+          "noul": 0.6023
+        }
+      }
+    }
+  },
+  "cuda_runtime_version": 12090,
+  "nvrtc_version": [
+    12,
+    4
+  ],
+  "loaded_cuda_libraries": [
+    "<temp>\\venv-full\\Lib\\site-packages\\nvidia\\cuda_nvrtc\\bin\\nvrtc64_120_0.dll",
+    "<temp>\\venv-full\\Lib\\site-packages\\nvidia\\cublas\\bin\\cublasLt64_12.dll",
+    "<temp>\\venv-full\\Lib\\site-packages\\cupy_backends\\cuda\\libs\\nvrtc.cp312-win_amd64.pyd",
+    "<temp>\\venv-full\\Lib\\site-packages\\nvidia\\cuda_nvrtc\\bin\\nvrtc-builtins64_124.dll",
+    "<temp>\\venv-full\\Lib\\site-packages\\nvidia\\cublas\\bin\\cublas64_12.dll"
+  ],
+  "installed_bytes": 4277835395,
+  "core_passed": true,
+  "official_passed": true
+}

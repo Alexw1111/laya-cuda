@@ -1,0 +1,186 @@
+{
+  "gates": {
+    "probability_mae": 0.001,
+    "probability_max": 0.01,
+    "agreement": 0.995,
+    "accuracy_sign_test_p": 0.05,
+    "speedup": 1.05
+  },
+  "reference": "official-fp32",
+  "models": {
+    "laya": {
+      "quality": {
+        "decisions": 6000,
+        "mae": 0.000332746479,
+        "max": 0.0272,
+        "agreement": 0.9996666666666667,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "accuracy": {
+          "cuda": 0.36233333333333334,
+          "official-fp32": 0.3621666666666667,
+          "official-fp16": 0.3621666666666667,
+          "official": 0.3625
+        },
+        "accuracy_test": {
+          "wins": 1,
+          "losses": 0,
+          "p_value": 1.0
+        },
+        "passed": false
+      },
+      "long": {
+        "decisions": 240,
+        "mae": 0.000286384439,
+        "max": 0.0054,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "tokens": [
+          374,
+          512
+        ],
+        "passed": true,
+        "peers": {
+          "official-fp16": {
+            "decisions": 240,
+            "mae": 0.000295080092,
+            "max": 0.0031,
+            "agreement": 1.0,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          },
+          "official": {
+            "decisions": 240,
+            "mae": 0.001986384439,
+            "max": 0.0151,
+            "agreement": 0.9958333333333333,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          }
+        }
+      },
+      "timing": {}
+    },
+    "laya-multilingual": {
+      "quality": {
+        "decisions": 6000,
+        "mae": 0.000316516432,
+        "max": 0.0084,
+        "agreement": 0.999,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "accuracy": {
+          "cuda": 0.353,
+          "official-fp32": 0.3531666666666667,
+          "official-fp16": 0.3526666666666667,
+          "official": 0.35333333333333333
+        },
+        "accuracy_test": {
+          "wins": 2,
+          "losses": 3,
+          "p_value": 0.5
+        },
+        "passed": true
+      },
+      "long": {
+        "decisions": 240,
+        "mae": 0.000358581236,
+        "max": 0.0034,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "tokens": [
+          652,
+          1024
+        ],
+        "passed": true,
+        "peers": {
+          "official-fp16": {
+            "decisions": 240,
+            "mae": 0.000382608696,
+            "max": 0.0045,
+            "agreement": 1.0,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          },
+          "official": {
+            "decisions": 240,
+            "mae": 0.003090045767,
+            "max": 0.05,
+            "agreement": 0.9958333333333333,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          }
+        }
+      },
+      "timing": {}
+    },
+    "laya-typed-decisions": {
+      "quality": {
+        "decisions": 6000,
+        "mae": 8.5521127e-05,
+        "max": 0.0037,
+        "agreement": 0.9998333333333334,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "accuracy": {
+          "cuda": 0.8543333333333333,
+          "official-fp32": 0.8541666666666666,
+          "official-fp16": 0.8538333333333333,
+          "official": 0.8533333333333334
+        },
+        "accuracy_test": {
+          "wins": 1,
+          "losses": 0,
+          "p_value": 1.0
+        },
+        "passed": true
+      },
+      "long": {
+        "decisions": 240,
+        "mae": 8.3524027e-05,
+        "max": 0.001,
+        "agreement": 1.0,
+        "finite": true,
+        "action_mae": 0.0,
+        "action_max": 0.0,
+        "tokens": [
+          687,
+          1024
+        ],
+        "passed": true,
+        "peers": {
+          "official-fp16": {
+            "decisions": 240,
+            "mae": 0.000102517162,
+            "max": 0.001,
+            "agreement": 1.0,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          },
+          "official": {
+            "decisions": 240,
+            "mae": 0.000805377574,
+            "max": 0.0052,
+            "agreement": 0.9916666666666667,
+            "finite": true,
+            "action_mae": 0.0,
+            "action_max": 0.0
+          }
+        }
+      },
+      "timing": {}
+    }
+  }
+}
