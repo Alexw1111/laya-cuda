@@ -32,7 +32,7 @@ pip install laya-cuda   # core: CuPy + CUDA components, no Torch
 laya-cuda doctor laya   # check driver, GPU and CUDA components, then time one prediction
 ```
 
-Windows or Linux x86-64, Python 3.12–3.14 and an NVIDIA driver; no CUDA Toolkit is needed. To work on the source, use [uv](https://docs.astral.sh/uv/):
+Windows or Linux x86-64, Python 3.12–3.14 and an NVIDIA GPU with compute capability 8.0 or newer (Ampere or later, such as RTX 30/40/50, A100, L4 or H100); no CUDA Toolkit is needed. Measured on an RTX 4090. To work on the source, use [uv](https://docs.astral.sh/uv/):
 
 ```sh
 git clone https://github.com/Alexw1111/laya-cuda

@@ -6,9 +6,20 @@ import cupy as cp
 from cuda.pathfinder import load_nvidia_dynamic_lib
 import numpy as np
 
+# kernels.cu issues FP16 mma.sync.m16n8k16, which needs sm_80 (Ampere) or newer.
+MIN_ARCH = (8, 0)
+
+
+def check_arch(name, major, minor):
+    if (major, minor) < MIN_ARCH:
+        raise RuntimeError(f"{name} is sm_{major}{minor}; laya-cuda needs an NVIDIA GPU with compute capability "
+                           "8.0 or newer (Ampere or later)")
+
 
 class Ops:
     def __init__(self, stream):
+        p = cp.cuda.runtime.getDeviceProperties(cp.cuda.Device().id)
+        check_arch(p["name"].decode(), p["major"], p["minor"])
         self.stream = stream
         self.module = cp.RawModule(code=Path(__file__).with_name("kernels.cu").read_text(),
                                    options=("--std=c++17", "--fmad=false"))

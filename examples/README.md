@@ -1,10 +1,9 @@
 # Local library and examples
 
-Nothing is published. Build the wheel locally:
+Install the library from PyPI:
 
 ```powershell
-uv build
-pip install .\dist\laya_cuda-0.1.0-py3-none-any.whl
+pip install laya-cuda
 ```
 
 The wheel contains `laya_cuda` and its CUDA kernels. It does not contain examples,

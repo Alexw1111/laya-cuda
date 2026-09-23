@@ -22,6 +22,15 @@ def test_kernel_source_is_ascii():
     assert (Path(__file__).parents[1]/"laya_cuda"/"kernels.cu").read_bytes().isascii()
 
 
+def test_gpu_architecture_check():
+    pytest.importorskip("cupy")
+    from laya_cuda.ops import check_arch
+    check_arch("NVIDIA A100", 8, 0)
+    check_arch("NVIDIA GeForce RTX 4090", 8, 9)
+    with pytest.raises(RuntimeError, match=r"Tesla T4 is sm_75; .*compute capability 8\.0 or newer"):
+        check_arch("Tesla T4", 7, 5)
+
+
 def test_questions():
     q = question({"type":"choice","instructions":{"ask":"team"},"criteria":{"no":False,"zero":0,"empty":None}})
     assert q[3] == ["no: false","zero: 0","empty"]

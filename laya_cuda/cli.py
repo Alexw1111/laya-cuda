@@ -126,6 +126,7 @@ def doctor(args):
     def run():
         try:
             from .runtime import Ops, cp
+            from .ops import MIN_ARCH
             from cuda.pathfinder import load_nvidia_dynamic_lib
         except Exception as error:
             return report("CuPy", "fail", f"{type(error).__name__}: {error}")
@@ -140,7 +141,10 @@ def doctor(args):
             return report("GPU", "fail", "no CUDA device found")
         for index in range(cp.cuda.runtime.getDeviceCount()):
             p = cp.cuda.runtime.getDeviceProperties(index)
-            report(f"GPU {index}", "ok", f"{p['name'].decode()}, sm_{p['major']}{p['minor']}, {p['totalGlobalMem'] / 2**30:.1f} GiB")
+            detail = f"{p['name'].decode()}, sm_{p['major']}{p['minor']}, {p['totalGlobalMem'] / 2**30:.1f} GiB"
+            supported = (p["major"], p["minor"]) >= MIN_ARCH
+            report(f"GPU {index}", "ok" if supported else "warn",
+                   detail if supported else f"{detail}; unsupported, compute capability 8.0+ (Ampere or later) is required")
         report("NVRTC", "ok", ".".join(map(str, cp.cuda.nvrtc.getVersion())))
         report("cuBLAS", "ok", load_nvidia_dynamic_lib("cublas").abs_path)
         started = time.perf_counter()

@@ -40,7 +40,7 @@ def stub(monkeypatch):
 def test_version_help_and_usage_errors(capsys):
     with pytest.raises(SystemExit) as exit:
         cli.main(["--version"])
-    assert exit.value.code == 0 and "laya-cuda 0.1.0" in capsys.readouterr().out
+    assert exit.value.code == 0 and f"laya-cuda {cli.__version__}" in capsys.readouterr().out
     with pytest.raises(SystemExit) as exit:
         cli.main(["predict", "--nope"])
     assert exit.value.code == 2

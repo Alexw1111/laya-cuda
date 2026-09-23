@@ -32,7 +32,7 @@ pip install laya-cuda   # 核心安装：CuPy + CUDA 组件，不装 Torch
 laya-cuda doctor laya   # 检查驱动、GPU 和 CUDA 组件，并计时一次预测
 ```
 
-支持 Windows 或 Linux x86-64、Python 3.12–3.14，需要 NVIDIA 驱动，不需要安装 CUDA Toolkit。如果要改源码，用 [uv](https://docs.astral.sh/uv/)：
+支持 Windows 或 Linux x86-64、Python 3.12–3.14，需要计算能力 8.0 及以上的 NVIDIA GPU（Ampere 及更新，例如 RTX 30/40/50 系、A100、L4、H100），不需要安装 CUDA Toolkit。测试显卡为 RTX 4090。如果要改源码，用 [uv](https://docs.astral.sh/uv/)：
 
 ```sh
 git clone https://github.com/Alexw1111/laya-cuda

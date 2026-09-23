@@ -69,7 +69,8 @@ with BatchEngine("laya") as model:
 
 ## Platform and dependencies
 
-- **Targets:** Windows x86-64 and Ubuntu WSL2 x86-64, Python 3.12–3.14, NVIDIA GPU. Model validation used Python 3.12 on an RTX 4090. Older drivers, other GPUs and Python versions, and native Linux are not validated.
+- **Targets:** Windows x86-64 and Ubuntu WSL2 x86-64, Python 3.12–3.14, NVIDIA GPU with compute capability 8.0 or newer. Model validation used Python 3.12 on an RTX 4090; installation was also checked with Python 3.13 and 3.14 on Windows. Older drivers, other GPUs and native Linux are not validated.
+- **GPU generation:** the attention kernel uses FP16 tensor-core `mma.sync.m16n8k16`, which needs Ampere (sm_80) or later. Turing GPUs such as the T4 and RTX 20 series, and older ones, cannot compile it: `Engine` raises a clear error and `laya-cuda doctor` flags them.
 - **Drivers:** Windows 551.78+ (including the host driver used by WSL2) or Linux 550.54.15+; newer drivers remain compatible. These targets follow [NVIDIA's CUDA 12.4.1 release notes](https://docs.nvidia.com/cuda/archive/12.4.1/cuda-toolkit-release-notes/).
   - The lower CUDA 12 minor-compatibility floor is not advertised for our runtime compilation path.
   - The older targets have not been physically tested.
