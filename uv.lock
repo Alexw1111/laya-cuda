@@ -511,7 +511,7 @@ wheels = [
 
 [[package]]
 name = "laya-cuda"
-version = "0.1.1"
+version = "0.1.1.post1"
 source = { editable = "." }
 dependencies = [
     { name = "cupy-cuda12x" },
@@ -560,21 +560,21 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "cupy-cuda12x", specifier = "==14.2.0" },
+    { name = "cupy-cuda12x", specifier = ">=14.2,<15" },
     { name = "datasets", marker = "extra == 'benchmark'", specifier = ">=4,<5" },
     { name = "huggingface-hub", specifier = ">=1.5,<2" },
     { name = "laya", marker = "extra == 'reference'", specifier = "==0.3.5" },
     { name = "laya-cuda", extras = ["benchmark"], marker = "extra == 'full'" },
     { name = "laya-cuda", extras = ["reference"], marker = "extra == 'benchmark'" },
     { name = "matplotlib", marker = "extra == 'benchmark'", specifier = ">=3.10,<4" },
-    { name = "numpy", specifier = ">=2.0,<2.6" },
-    { name = "nvidia-cublas-cu12", specifier = "==12.4.5.8" },
-    { name = "nvidia-cuda-nvrtc-cu12", specifier = "==12.4.127" },
-    { name = "nvidia-cuda-runtime-cu12", specifier = "==12.4.127" },
+    { name = "numpy", specifier = ">=2.0,<3" },
+    { name = "nvidia-cublas-cu12", specifier = ">=12.4.5.8,<13" },
+    { name = "nvidia-cuda-nvrtc-cu12", specifier = ">=12.4.127,<13" },
+    { name = "nvidia-cuda-runtime-cu12", specifier = ">=12.4.127,<13" },
     { name = "psutil", marker = "extra == 'benchmark'", specifier = ">=7,<8" },
     { name = "pyarrow", marker = "extra == 'benchmark'", specifier = ">=25,<26" },
-    { name = "safetensors", specifier = ">=0.8,<0.9" },
-    { name = "tokenizers", specifier = ">=0.23.1,<0.24" },
+    { name = "safetensors", specifier = ">=0.8,<1" },
+    { name = "tokenizers", specifier = ">=0.23.1,<1" },
     { name = "torch", marker = "sys_platform == 'win32' and extra == 'reference'", specifier = "==2.12.1", index = "https://download.pytorch.org/whl/cu130" },
     { name = "torch", marker = "sys_platform != 'win32' and extra == 'reference'", specifier = "==2.12.1" },
     { name = "transformers", marker = "extra == 'reference'", specifier = "==5.17.0" },

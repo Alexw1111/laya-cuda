@@ -74,12 +74,13 @@ with BatchEngine("laya") as model:
 - **Drivers:** Windows 551.78+ (including the host driver used by WSL2) or Linux 550.54.15+; newer drivers remain compatible. These targets follow [NVIDIA's CUDA 12.4.1 release notes](https://docs.nvidia.com/cuda/archive/12.4.1/cuda-toolkit-release-notes/).
   - The lower CUDA 12 minor-compatibility floor is not advertised for our runtime compilation path.
   - The older targets have not been physically tested.
-- **Core wheels:** `cupy-cuda12x`, CUDA runtime 12.4.127, cuBLAS 12.4.5.8 and NVRTC 12.4.127.
+- **Core wheels:** `cupy-cuda12x` 14 and the CUDA 12 runtime, cuBLAS and NVRTC wheels, 12.4 or newer.
   - No CUDA Toolkit, host compiler, NVCC, manual library path, model conversion or CUDA 13 is required.
   - The dependencies still occupy hundreds of megabytes; this is not a tiny pure-Python runtime.
-- **Version pinning:**
-  - The CUDA component wheels are pinned for reproducibility; this does not pin your system Toolkit or driver.
-  - CuPy 14.2 reports an embedded runtime of 12.9, while this package supplies NVRTC, cuBLAS and headers from 12.4.1. Runtime version strings alone are not driver requirements.
+- **Version ranges:**
+  - Each dependency accepts releases up to its next major version, so the package can share an environment with other CUDA 12 packages. A fresh install currently resolves the CUDA components to 12.9; `uv.lock` keeps the 12.4 set that the benchmarks used.
+  - Checked on the RTX 4090: with CUDA components 12.9 the quality gates give the same results as with 12.4, and fresh installs pass on Windows (Python 3.12–3.14) and WSL2 (Python 3.12). At the lower bounds (CUDA components 12.4, numpy 2.0, tokenizers 0.23.1, huggingface-hub 1.5) answers and token IDs match the current versions exactly.
+  - The ranges do not pin your system Toolkit or driver. CuPy 14.2 reports an embedded runtime of 12.9; runtime version strings alone are not driver requirements.
 - **Not supported:** CUDA 11. Also, do not install `cupy-cuda12x` and `cupy-cuda13x` in the same environment.
 - **Extras:**
   - `reference` adds the official Laya SDK. It requires CUDA 13 Torch, which has a higher driver requirement; this does not apply to core-only installs.

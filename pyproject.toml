@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "laya-cuda"
-version = "0.1.1"
+version = "0.1.1.post1"
 description = "Fast local CUDA inference for Laya decision models, without Torch."
 readme = "README.md"
 requires-python = ">=3.12,<3.15"
@@ -23,9 +23,9 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 dependencies = [
-  "cupy-cuda12x==14.2.0", "nvidia-cublas-cu12==12.4.5.8",
-  "nvidia-cuda-runtime-cu12==12.4.127", "nvidia-cuda-nvrtc-cu12==12.4.127",
-  "numpy>=2.0,<2.6", "safetensors>=0.8,<0.9", "tokenizers>=0.23.1,<0.24",
+  "cupy-cuda12x>=14.2,<15", "nvidia-cublas-cu12>=12.4.5.8,<13",
+  "nvidia-cuda-runtime-cu12>=12.4.127,<13", "nvidia-cuda-nvrtc-cu12>=12.4.127,<13",
+  "numpy>=2.0,<3", "safetensors>=0.8,<1", "tokenizers>=0.23.1,<1",
   "huggingface-hub>=1.5,<2",
 ]
 
